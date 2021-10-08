@@ -1,0 +1,11 @@
+.Banner{
+    background-color: rgba(2,32,131,.986);
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 100%;
+    height: 7vh;
+    font-size:1rem;
+  }

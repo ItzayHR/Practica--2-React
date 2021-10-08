@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import Banner from './layout/Banner';
+import Header from './layout/Header';
+import Body from './layout/Body';
+import Footer from './layout/Footer';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component
+{
+  render()
+  {
+    const temas = 
+    [
+      "Tipos de componentes ",
+      "Contenedores",
+      "Usar más de un componente",
+      "Funciones",
+      "Props",
+      "PropTypes",
+      "DefaultProps"
+    ]
+    return(
+      <div>
+        <Banner/>
+        <Header/>
+        <Banner texto = "08/OCT/2021"/>
+        <Body practica = "Práctica 2 - Unidad 1" temas = {temas}/>
+        <Footer pie = {<p>Copyright © Todos los derechos reservados</p>}/>
+      </div>
+    )
+  }
 }
 
 export default App;
